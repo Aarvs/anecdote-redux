@@ -3,9 +3,10 @@ import { addVote } from "../reducers/anecdoteReducer";
 
 const AnecdoteList = () => {
     const dispatch = useDispatch();
-    const anecdotes = useSelector(state => state.anecdotes)
+    const anecdotes = useSelector(state => state.anecdote)
+    console.log(anecdotes)
     const filter = useSelector(state => state.filter)
-    
+    console.log(filter)
     const Anecdote = ({anecdote, handleClick}) => {
         return(
             <li>
@@ -22,7 +23,7 @@ const AnecdoteList = () => {
 
     const filteredAnecdotes = anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(filter.toLowerCase()))
     const sortedAnecdotes = filteredAnecdotes.sort((a,b) => b.votes - a.votes)
-
+    
     return(
         <ul>
             {sortedAnecdotes.map(anecdote => 
@@ -37,3 +38,4 @@ const AnecdoteList = () => {
 }
 
 export default AnecdoteList
+

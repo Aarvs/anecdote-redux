@@ -5,8 +5,8 @@ import AnecdoteList from './components/AnecdoteList'
 const App = () => {
 
   return (
-    <div>
-      <h2>Anecdotes</h2>
+    <div style={{overflow:"hidden"}}> 
+      <h2>Anecdotes With Redux Tookit</h2>
       <Filter/>
       <AnecdoteList/>
       <h2>create new</h2>
