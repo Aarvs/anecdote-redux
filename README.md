@@ -25,7 +25,18 @@ Make sure you have Node.js and npm installed on your machine.
 git clone https://github.com/your-username/anecdote-app.git
 cd redux-anecdotes
 
-2. Install Dependencies
+2. Want to make this project yours so that you can do your own changes:
 ```bash
+rm -rf .git
+npm install
+
+3. For running the project
+```bash
+- For running the server
 npm run dev
+
+- For running the json server
+npm run server
+
+
 
